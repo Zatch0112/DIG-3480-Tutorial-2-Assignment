@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerScript : MonoBehaviour
 {
     private Rigidbody2D rd2d;
     public float speed;
-    public Text score;
-    private int scoreValue = 0;
+    public TextMeshProUGUI countText;
+    public TextMeshProUGUI winText;
+    public TextMeshProUGUI livesText;
+    private int count;
+    private int lives;
 
     // Start is called before the first frame update
     void Start()
     {
         rd2d = GetComponent<Rigidbody2D>();
-        score.text = scoreValue.ToString();
+        count = 0;
+        lives = 3;
+        SetCountText();
+        winText.text = "";
     }
     
     // Update is called once per frame
@@ -36,9 +43,20 @@ public class PlayerScript : MonoBehaviour
     {
         if(collision.collider.tag == "Coin")
         {
-            scoreValue += 1;
-            score.text = scoreValue.ToString();
             Destroy(collision.collider.gameObject);
+            count = count + 1;
+            SetCountText();
+        }
+        else if (collision.collider.tag == "Enemy")
+        {
+            Destroy(collision.collider.gameObject);
+            lives = lives - 1;
+            SetCountText();
+        }
+        if (count == 4)
+        {
+            transform.position = new Vector2(57.0f, 1.0f);
+            lives = 3;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -49,6 +67,22 @@ public class PlayerScript : MonoBehaviour
             {
                 rd2d.AddForce(new Vector2(0, 3), ForceMode2D.Impulse);
             }
+        }
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Count:" + count.ToString();
+        livesText.text = "Lives:" + lives.ToString();
+        if (count >= 8)
+        {
+            Destroy(this);
+            winText.text = "You Win!\nGame Created By Zach Podaril";
+        }
+        if (lives <= 0)
+        {
+            Destroy(this);
+            winText.text = "You Lose!\nGame Created By Zach Podaril";
         }
     }
 }

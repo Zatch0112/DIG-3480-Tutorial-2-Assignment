@@ -21,6 +21,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -31,9 +37,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
-    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Challenge 2.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -46,6 +51,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 61
@@ -57,23 +64,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 598}
+      Script: {instanceID: 622}
     - Class: 114
-      Script: {instanceID: 1722}
+      Script: {instanceID: 1714}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 1814}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2194}
     - Class: 114
-      Script: {instanceID: 2784}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2776}
     - Class: 114
-      Script: {instanceID: 3244}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 26156}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 27238}
+      Script: {instanceID: 3236}
+    - Class: 114
+      Script: {instanceID: 4674}
+    - Class: 114
+      Script: {instanceID: 4956}
+    - Class: 114
+      Script: {instanceID: 5052}
+    - Class: 114
+      Script: {instanceID: 5392}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -571,6 +586,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 66bca5cc6a18c5298ec75235e56a84d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraScript
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -587,6 +608,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: b73f90a9ed5ec77da8a5f43edcdafc10
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerScript
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -617,20 +644,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: ba8885765ad8fe055d2176fbae6efcd9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerScript
-  - hash:
-      serializedVersion: 2
-      Hash: 66bca5cc6a18c5298ec75235e56a84d6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraScript
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Challenge 2.unity
   playerPath: C:/Users/Zacha/OneDrive/Documents/Fall 2021/Computers as a Medium/Tutorial
-    2/New Unity Project (1)/Builds/New Unity Project (1).exe
+    2/New Unity Project (1)/Builds 2/New Unity Project (1).exe
